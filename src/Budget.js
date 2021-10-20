@@ -1,25 +1,24 @@
-import react, {useState} from "react";
-import { NavBar } from "./nav/NavBar";
-import { ApplicationViews } from "./nav/ApplicationViews";
+import React, { useState } from "react"
+import { ApplicationViews } from "./ApplicationViews"
+import { NavBar } from "./nav/NavBar"
 
-export const Budget = () => {
+export const Nutshell = () => {
 
-    const [isAuthenticated, setIsAuthenticated] = useState(sessionStorage.getItem("user") !== null)
+  const [isAuthenticated, setIsAuthenticated] = useState(sessionStorage.getItem("nutshell_user") !== null)
 
   const setAuthUser = (user) => {
-    sessionStorage.setItem("user", user.id)
-    sessionStorage.setItem("username", user.name)
-    setIsAuthenticated(sessionStorage.getItem("user") !== null)
+    sessionStorage.setItem("nutshell_user", user.id)
+    sessionStorage.setItem("nutshell_username", user.name)
+    setIsAuthenticated(sessionStorage.getItem("nutshell_user") !== null)
   }
 
   const clearUser = () => {
     sessionStorage.clear();
-    setIsAuthenticated(sessionStorage.getItem("user") !== null)
+    setIsAuthenticated(sessionStorage.getItem("nutshell_user") !== null)
   }
 
     return (
       <>
-        <NavBar clearUser={clearUser} isAuthenticated={isAuthenticated} />
         <ApplicationViews setAuthUser={setAuthUser} isAuthenticated={isAuthenticated} />
       </>
     )

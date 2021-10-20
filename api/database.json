@@ -1,0 +1,11 @@
+{
+  "users": [
+    {
+      "email": "a@a.com",
+      "name": "bruh bruh",
+      "id": 1
+    }
+  ],
+  "expenses": [],
+  "typeOfExpense": []
+}

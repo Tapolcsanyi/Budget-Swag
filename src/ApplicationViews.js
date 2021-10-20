@@ -27,7 +27,7 @@ export const ApplicationViews = ({ clearUser, isAuthenticated, setAuthUser }) =>
 
           {isAuthenticated ?
           <li className="nav-item" >
-            <a className="nav-link" onClick={handleLogout} >Logout</a>
+            <button className="nav-link" onClick={handleLogout} >Logout</button>
           </li>
           : null}
 

@@ -1,18 +1,38 @@
 //Author: Matt, Purpose: To not allow access to user if they are not logged in
 
 import React, {useState} from "react"
-import { Redirect } from "react-router"
+import { Redirect, useHistory } from "react-router"
 import { Route } from "react-router-dom"
 import { Login } from "./auth/Login"
 import { Register } from "./auth/Register"
-import { ExpenseCard } from "./expenses/Expense"
+import { ExpenseList } from "./expenses/ExpenseList"
 
-export const ApplicationViews = ({ isAuthenticated, setAuthUser }) => {
+export const ApplicationViews = ({ clearUser, isAuthenticated, setAuthUser }) => {
+
+  const history = useHistory()
+
+  const handleLogout = () => {
+    const retVal = window.confirm("Are you sure you want to Logout?")
+    
+    if(retVal == true){
+    history.push('/login');
+    clearUser();
+    } else {
+      return false
+    }
+  }
+
   return (
     <>
 
+          {isAuthenticated ?
+          <li className="nav-item" >
+            <a className="nav-link" onClick={handleLogout} >Logout</a>
+          </li>
+          : null}
+
       <Route exact path="/">
-        {isAuthenticated ? <ExpenseCard /> : <Redirect to="/login" />}
+        {isAuthenticated ? <ExpenseList /> : <Redirect to="/login" />}
       </Route>
 
       <Route exact path="/login">

@@ -2,24 +2,24 @@ import React, { useState } from "react"
 import { ApplicationViews } from "./ApplicationViews"
 import { NavBar } from "./nav/NavBar"
 
-export const Nutshell = () => {
+export const Budget = () => {
 
   const [isAuthenticated, setIsAuthenticated] = useState(sessionStorage.getItem("nutshell_user") !== null)
 
   const setAuthUser = (user) => {
-    sessionStorage.setItem("nutshell_user", user.id)
-    sessionStorage.setItem("nutshell_username", user.name)
-    setIsAuthenticated(sessionStorage.getItem("nutshell_user") !== null)
+    sessionStorage.setItem("budget_user", user.id)
+    sessionStorage.setItem("budget_username", user.name)
+    setIsAuthenticated(sessionStorage.getItem("budget_user") !== null)
   }
 
   const clearUser = () => {
     sessionStorage.clear();
-    setIsAuthenticated(sessionStorage.getItem("nutshell_user") !== null)
+    setIsAuthenticated(sessionStorage.getItem("budget_user") !== null)
   }
 
     return (
       <>
-        <ApplicationViews setAuthUser={setAuthUser} isAuthenticated={isAuthenticated} />
+        <ApplicationViews clearUser={clearUser} setAuthUser={setAuthUser} isAuthenticated={isAuthenticated} />
       </>
     )
 

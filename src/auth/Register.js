@@ -29,7 +29,8 @@ export const Register = ({setAuthUser}) => {
                         body: JSON.stringify({
                             email: email.current.value,
                             name: `${firstName.current.value} ${lastName.current.value}`,
-                            salary: 0
+                            salary: 0,
+                            perSaved: 0
                         })
                     })
                         .then(res => res.json())

@@ -24,31 +24,6 @@ export const NavBar = ({ clearUser, isAuthenticated }) => {
 
       <ul className="nav nav-pills nav-fill">
         {isAuthenticated ?
-          <li className="nav-item">
-            <Link className="nav-link" to="/">Articles</Link>
-          </li>
-          : null}
-        {isAuthenticated ?
-          <li className="nav-item">
-            <Link className="nav-link" to="/friends">Friends</Link>
-          </li>
-          : null}
-        {isAuthenticated ?
-          <li className="nav-item">
-            <Link className="nav-link" to="/messages">Messages</Link>
-          </li>
-          : null}
-        {isAuthenticated ?
-          <li className="nav-item">
-            <Link className="nav-link" to="/tasks">Tasks</Link>
-          </li>
-          : null}
-        {isAuthenticated ?
-          <li className="nav-item">
-            <Link className="nav-link" to="/events">Events</Link>
-          </li>
-          : null}
-        {isAuthenticated ?
           <li className="nav-item" >
             <a className="nav-link" onClick={handleLogout} >Logout</a>
           </li>

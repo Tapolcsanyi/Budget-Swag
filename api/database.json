@@ -2,20 +2,13 @@
   "users": [
     {
       "email": "a@a.com",
-      "name": "joe mama",
+      "name": "bruh mama",
       "salary": 0,
+      "perSaved": 0,
       "id": 1
     }
   ],
-  "expenses": [
-    {
-      "id": 1,
-      "name": "bruh",
-      "type": 1,
-      "amount": 1,
-      "userId": 1
-    }
-  ],
+  "expenses": [],
   "typeOfExpense": [
     {
       "name": "lol",

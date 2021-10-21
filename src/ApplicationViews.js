@@ -5,6 +5,7 @@ import { Redirect, useHistory } from "react-router"
 import { Route } from "react-router-dom"
 import { Login } from "./auth/Login"
 import { Register } from "./auth/Register"
+import { ExpenseForm } from "./expenses/ExpenseForm"
 import { ExpenseList } from "./expenses/ExpenseList"
 
 export const ApplicationViews = ({ clearUser, isAuthenticated, setAuthUser }) => {
@@ -41,6 +42,10 @@ export const ApplicationViews = ({ clearUser, isAuthenticated, setAuthUser }) =>
 
       <Route path="/register">
         <Register setAuthUser={setAuthUser} />
+      </Route>
+
+      <Route path="/expenseform">
+        <ExpenseForm />
       </Route>
 
     </>

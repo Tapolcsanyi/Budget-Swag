@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { ApplicationViews } from "./ApplicationViews"
-import { NavBar } from "./nav/NavBar"
+import { NavBar } from "./NavBar" 
 
 export const Budget = () => {
 
@@ -10,6 +10,8 @@ export const Budget = () => {
     sessionStorage.setItem("budget_user", user.id)
     sessionStorage.setItem("budget_username", user.name)
     sessionStorage.setItem("budget_email", user.email)
+    sessionStorage.setItem("budget_salary", user.salary)
+    sessionStorage.setItem("budget_saving", user.perSaved)
     setIsAuthenticated(sessionStorage.getItem("budget_user") !== null)
   }
 
@@ -20,6 +22,7 @@ export const Budget = () => {
 
     return (
       <>
+        <NavBar />
         <ApplicationViews clearUser={clearUser} setAuthUser={setAuthUser} isAuthenticated={isAuthenticated} />
       </>
     )

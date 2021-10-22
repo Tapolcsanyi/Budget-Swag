@@ -2,13 +2,21 @@
   "users": [
     {
       "id": 1,
-      "salary": "121",
-      "perSaved": "1331",
+      "salary": "1000",
+      "perSaved": "10",
       "name": "bruh moment",
       "email": "a@a.com"
     }
   ],
-  "expenses": [],
+  "expenses": [
+    {
+      "name": "nuhd",
+      "amount": "100",
+      "typeId": 1,
+      "userId": "1",
+      "id": 1
+    }
+  ],
   "typeOfExpense": [
     {
       "name": "lol",

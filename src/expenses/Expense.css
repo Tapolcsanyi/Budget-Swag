@@ -1,0 +1,14 @@
+.budgetLabel {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.budgetInfo {
+    display: flex;
+    padding: 3px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}

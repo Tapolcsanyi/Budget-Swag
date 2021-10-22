@@ -73,6 +73,7 @@ export const SalaryForm = () => {
                     </div>
                     <div>
                         <button type="button" onClick={updateCompletedTask}>Update</button>
+                        <button onClick={() => history.push("/")}>Cancel</button>
                     </div>
                 </fieldset>
             </form>

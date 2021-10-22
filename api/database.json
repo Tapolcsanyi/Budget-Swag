@@ -1,11 +1,11 @@
 {
   "users": [
     {
-      "email": "a@a.com",
-      "name": "bruh mama",
-      "salary": 0,
-      "perSaved": 0,
-      "id": 1
+      "id": 1,
+      "salary": "121",
+      "perSaved": "1331",
+      "name": "bruh moment",
+      "email": "a@a.com"
     }
   ],
   "expenses": [],

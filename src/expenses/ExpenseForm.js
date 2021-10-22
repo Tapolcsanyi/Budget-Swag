@@ -5,7 +5,7 @@ import { addExpense } from "../DataManager";
 
 export const ExpenseForm = () => {
 
-    const [expense, setExpense] = useState({
+    const [expense, setexpense] = useState({
 		name: "",
 		amount: "",
         typeId: 1,
@@ -26,7 +26,7 @@ export const ExpenseForm = () => {
 	
 		newExpense[event.target.id] = selectedVal
 		
-		setExpense(newExpense)
+		setexpense(newExpense)
 	}
 
     const handleClickSaveTask = (event) => {
@@ -40,23 +40,23 @@ export const ExpenseForm = () => {
     return (
 
         <form className="">
-            <h2 className="">add a new expense</h2>
+            <h2 className="">Add A New Expense</h2>
             <fieldset className="">
                 <div className="">
                     <label htmlFor=""></label>
-                    <input type="text" id="name" onChange={handleControlledInputChange} className="" placeholder="expense name" />
+                    <input type="text" id="name" onChange={handleControlledInputChange} className="" placeholder="Expense Name" />
                 </div>
             </fieldset>
 
             <fieldset className="taskform-fieldset">
                 <div className="form-group">
-                    <label htmlFor="amount">Completion Date</label>
-                    <input type="number" id="amount" onChange={handleControlledInputChange}className="form-control" placeholder="expense cost" />
+                    <label htmlFor="amount">$</label>
+                    <input type="number" id="amount" onChange={handleControlledInputChange}className="form-control" placeholder="Expense Cost" />
                 </div>
             </fieldset>
             <button className=""
                 onClick={handleClickSaveTask}>
-                add expense
+                Add Expense
             </button>
         </form>
 

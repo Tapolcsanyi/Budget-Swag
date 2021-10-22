@@ -1,3 +1,6 @@
+import { useHistory } from "react-router"
+
+
 export const ExpenseCard = ({expense, handleExpenseDelete}) => {
     return (
         <>
@@ -10,13 +13,10 @@ export const ExpenseCard = ({expense, handleExpenseDelete}) => {
 
 export const SalaryCard = ({user}) => {
 
-    const newPercent = user.perSaved * 100
-
     return (
         <>
             <h1>hi, {user.name}</h1>
-            <h2>Salary: ${user.salary}, Percent Saved: {newPercent}%</h2>
-            <button>Edit Salary</button>
+            <h2>Salary: ${user.salary}, Percent Saved: {user.perSaved}%</h2>
         </>
     )
 }

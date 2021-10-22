@@ -9,6 +9,7 @@ export const Budget = () => {
   const setAuthUser = (user) => {
     sessionStorage.setItem("budget_user", user.id)
     sessionStorage.setItem("budget_username", user.name)
+    sessionStorage.setItem("budget_email", user.email)
     setIsAuthenticated(sessionStorage.getItem("budget_user") !== null)
   }
 

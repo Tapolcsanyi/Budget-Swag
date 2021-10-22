@@ -35,6 +35,7 @@ export const ExpenseList = () => {
             {user.filter(user => user.id === loguser).map(user =>
                 <SalaryCard user={user} key={user.id} />)}
 
+                <button onClick={() => history.push("/salaryform")}>Edit Salary</button>
                 <button onClick={() => history.push("/expenseform")}>Add Expense</button>
 
             {expenses.filter(expense => expense.user.id === loguser).map(expense =>

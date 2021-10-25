@@ -20,6 +20,27 @@
       "perSaved": "25",
       "name": "joe mama",
       "email": "re@re.com"
+    },
+    {
+      "id": 4,
+      "salary": "3968",
+      "perSaved": "15",
+      "name": "daniella tapolcsanyi",
+      "email": "d@d.com"
+    },
+    {
+      "id": 5,
+      "salary": "100",
+      "perSaved": "010101",
+      "name": "fds few",
+      "email": "wq@dsa.com"
+    },
+    {
+      "id": 6,
+      "salary": "1200",
+      "perSaved": "2",
+      "name": "bruh moment",
+      "email": "w@w.com"
     }
   ],
   "expenses": [
@@ -41,29 +62,15 @@
       "name": "car insurance",
       "amount": "100",
       "typeId": 1,
-      "userId": "3",
+      "userId": "4",
       "id": 3
     },
     {
-      "name": "bruh?",
-      "amount": "11",
+      "name": "phone",
+      "amount": "100",
       "typeId": 1,
-      "userId": "3",
+      "userId": "4",
       "id": 4
-    },
-    {
-      "name": "car insuerance",
-      "amount": "120",
-      "typeId": 1,
-      "userId": "1",
-      "id": 5
-    },
-    {
-      "name": "vf,dgd",
-      "amount": "312",
-      "typeId": 1,
-      "userId": "1",
-      "id": 6
     }
   ],
   "typeOfExpense": [

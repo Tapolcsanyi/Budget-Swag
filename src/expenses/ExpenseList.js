@@ -9,6 +9,8 @@ export const ExpenseList = () => {
     const loguser = parseInt(sessionStorage.getItem("budget_user"))
     const [expenses, setExpenses] = useState ([])
     const [user, setUsers] = useState([])
+    const [salary, setSalary] = useState([])
+    const [saved, setSaved] = useState([])
     const history = useHistory();
     const userSalary = parseInt(sessionStorage.getItem("budget_salary"))
     const userPerSaved = parseInt(sessionStorage.getItem("budget_saving"))
@@ -43,8 +45,6 @@ export const ExpenseList = () => {
 
     const finalBalance = balanceAfterSaving - sum
 
-    console.log(parseInt(userPerSaved))
-
     useEffect(() => {
         getExpenses();
         getUsers();
@@ -55,8 +55,12 @@ export const ExpenseList = () => {
                 <SalaryCard user={user} key={user.id} />)}
                 <h2 className="budgetInfo">CHECKING BALANCE: ${finalBalance.toFixed(2)}</h2>
 
-                <button onClick={() => history.push("/salaryform")}>Edit Salary</button>
-                <button onClick={() => history.push("/expenseform")}>Add Expense</button>
+                <div className="buttons">
+
+                <button className="Salarybutton" onClick={() => history.push("/salaryform")}>Edit Salary</button>
+                <button className="Salarybutton" onClick={() => history.push("/expenseform")}>Add Expense</button>
+                
+                </div>
 
             {expenses.filter(expense => expense.user.id === loguser).map(expense =>
                 <ExpenseCard expense={expense} key={expense.id} handleExpenseDelete={handleExpenseDelete} />)}

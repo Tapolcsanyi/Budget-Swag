@@ -19,7 +19,6 @@ export const SalaryForm = () => {
         evt.preventDefault()
         setIsLoading(true);
 
-        // This is an edit, so we need the id
         const editedUser = {
             id: userId,
             salary: user.salary,
@@ -29,6 +28,8 @@ export const SalaryForm = () => {
         };
         console.log(editedUser)
         updateSalary(editedUser)
+            .then(sessionStorage.setItem("budget_salary", user.salary))
+            .then(sessionStorage.setItem("budget_saving", user.perSaved))
             .then(() => history.push("/")
             )
     }

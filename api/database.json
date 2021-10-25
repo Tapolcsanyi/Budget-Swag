@@ -6,15 +6,64 @@
       "perSaved": "10",
       "name": "bruh moment",
       "email": "a@a.com"
+    },
+    {
+      "id": 2,
+      "salary": "2000",
+      "perSaved": "12",
+      "name": "joe mama",
+      "email": "bruh@bruh.com"
+    },
+    {
+      "id": 3,
+      "salary": "2000",
+      "perSaved": "25",
+      "name": "joe mama",
+      "email": "re@re.com"
     }
   ],
   "expenses": [
     {
-      "name": "nuhd",
+      "name": "FD",
+      "amount": "232",
+      "typeId": 1,
+      "userId": "2",
+      "id": 1
+    },
+    {
+      "name": "meemo",
+      "amount": "42",
+      "typeId": 1,
+      "userId": "2",
+      "id": 2
+    },
+    {
+      "name": "car insurance",
       "amount": "100",
       "typeId": 1,
+      "userId": "3",
+      "id": 3
+    },
+    {
+      "name": "bruh?",
+      "amount": "11",
+      "typeId": 1,
+      "userId": "3",
+      "id": 4
+    },
+    {
+      "name": "car insuerance",
+      "amount": "120",
+      "typeId": 1,
       "userId": "1",
-      "id": 1
+      "id": 5
+    },
+    {
+      "name": "vf,dgd",
+      "amount": "312",
+      "typeId": 1,
+      "userId": "1",
+      "id": 6
     }
   ],
   "typeOfExpense": [

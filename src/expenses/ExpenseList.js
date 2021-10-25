@@ -3,6 +3,7 @@ import { ExpenseCard, SalaryCard } from "./Expense";
 import { getAllExpenses, getAllUsers, addExpense, deleteExpense } from "../DataManager";
 import { useHistory } from "react-router";
 import { CheckingBalance } from "./MathFunctions";
+import "./Expense.css"
 
 export const ExpenseList = () => {
     const loguser = parseInt(sessionStorage.getItem("budget_user"))
@@ -10,9 +11,9 @@ export const ExpenseList = () => {
     const [user, setUsers] = useState([])
     const history = useHistory();
     const userSalary = parseInt(sessionStorage.getItem("budget_salary"))
-    const userPerSaved = parseInt(sessionStorage.getItem("budget_saved"))
+    const userPerSaved = parseInt(sessionStorage.getItem("budget_saving"))
 
-    let balance = userSalary - (userSalary * (userPerSaved / 100))
+    let balanceAfterSaving = userSalary - (userSalary * (userPerSaved / 100))
 
     const getExpenses = () => {
         return getAllExpenses().then(res => {
@@ -31,7 +32,19 @@ export const ExpenseList = () => {
             getExpenses()
         ))
     }
-    
+
+    const filteredExpenses = expenses.filter(expense => expense.user.id === loguser)
+
+    let sum = 0;
+
+    for (let i = 0; i < filteredExpenses.length; i++) {
+    sum += parseInt(filteredExpenses[i].amount);
+    }
+
+    const finalBalance = balanceAfterSaving - sum
+
+    console.log(parseInt(userPerSaved))
+
     useEffect(() => {
         getExpenses();
         getUsers();
@@ -40,8 +53,7 @@ export const ExpenseList = () => {
         <>
             {user.filter(user => user.id === loguser).map(user =>
                 <SalaryCard user={user} key={user.id} />)}
-            {expenses.filter(expense => expense.user.id === loguser).map(expense =>
-                <CheckingBalance expense={expense.amount} key={expense.id} newbalance={balance}/>)}
+                <h2 className="budgetInfo">CHECKING BALANCE: ${finalBalance.toFixed(2)}</h2>
 
                 <button onClick={() => history.push("/salaryform")}>Edit Salary</button>
                 <button onClick={() => history.push("/expenseform")}>Add Expense</button>

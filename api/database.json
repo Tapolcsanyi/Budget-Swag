@@ -2,8 +2,8 @@
   "users": [
     {
       "id": 1,
-      "salary": "1000",
-      "perSaved": "10",
+      "salary": "300000",
+      "perSaved": "20",
       "name": "bruh moment",
       "email": "a@a.com"
     },
@@ -41,6 +41,13 @@
       "perSaved": "2",
       "name": "bruh moment",
       "email": "w@w.com"
+    },
+    {
+      "id": 7,
+      "salary": "4000",
+      "perSaved": "15",
+      "name": "gfljg jkfhkgjd",
+      "email": "s@s.com"
     }
   ],
   "expenses": [
@@ -71,6 +78,20 @@
       "typeId": 1,
       "userId": "4",
       "id": 4
+    },
+    {
+      "name": "car insurance",
+      "amount": "150",
+      "typeId": 1,
+      "userId": "7",
+      "id": 5
+    },
+    {
+      "name": "debt",
+      "amount": "1000",
+      "typeId": 1,
+      "userId": "7",
+      "id": 6
     }
   ],
   "typeOfExpense": [

@@ -26,7 +26,7 @@ export const SalaryForm = () => {
             name: sessionStorage.getItem("budget_username"),
             email: userEmail
         };
-        console.log(editedUser)
+        
         updateSalary(editedUser)
             .then(sessionStorage.setItem("budget_salary", user.salary))
             .then(sessionStorage.setItem("budget_saving", user.perSaved))

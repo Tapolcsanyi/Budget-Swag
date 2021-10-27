@@ -7,6 +7,7 @@ export const ExpenseCard = ({expense, handleExpenseDelete}) => {
             <h2 className="budgetLabel">{expense.name}</h2>
             <div className="budgetInfo">
                 <h3>cost: ${expense.amount}</h3>
+                <h4>Type: {expense.type.name}</h4>
                 <button className="budgetButton" onClick={() => handleExpenseDelete(expense.id)}>delete expense</button>
             </div>
         </div>
@@ -21,7 +22,7 @@ export const SalaryCard = ({user}) => {
             <h1 className="budgetLabel">hi, {user.name}</h1>
             <div className="budgetInfo">
                 <h2>Here's your monthly budget plan:</h2>
-                <h2>Salary: ${user.salary},    Percent Saved: {user.perSaved}%,    Amount Saved: ${amntSaved.toFixed(2)}</h2>
+                <h2>Monthly Salary: ${user.salary},    Percent Saved: {user.perSaved}%,    Amount Saved Monthly: ${amntSaved.toFixed(2)}</h2>
             </div>
         </div>
     )

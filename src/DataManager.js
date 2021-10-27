@@ -1,5 +1,10 @@
 export const getAllExpenses = () => {
-    return fetch("http://localhost:8088/expenses?_expand=user")
+    return fetch("http://localhost:8088/expenses?_expand=type")
+    .then(res => res.json())
+}
+
+export const getAllTypes = () => {
+    return fetch("http://localhost:8088/types")
     .then(res => res.json())
 }
 

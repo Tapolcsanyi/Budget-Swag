@@ -1,19 +1,26 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { useState } from "react";
 import { useHistory } from "react-router";
-import { addExpense } from "../DataManager";
+import { addExpense, getAllTypes } from "../DataManager";
 
 export const ExpenseForm = () => {
 
+    const [types, setTypes] = useState([])
     const [expense, setexpense] = useState({
 		name: "",
 		amount: "",
-        typeId: 1,
-        userId: sessionStorage.getItem("budget_user"),
+        typeId: 0,
+        userId: parseInt(sessionStorage.getItem("budget_user")),
 		
 	});
 
     const history = useHistory();
+
+    const getTypes = () => {
+        return getAllTypes().then(res => {
+            setTypes(res)
+        })
+    }
 
     const handleControlledInputChange = (event) => {
 	
@@ -29,6 +36,10 @@ export const ExpenseForm = () => {
 		setexpense(newExpense)
 	}
 
+    useEffect(() => {
+        getTypes();
+    }, [])
+
     const handleClickSaveTask = (event) => {
 		event.preventDefault() 
 
@@ -43,21 +54,27 @@ export const ExpenseForm = () => {
             <h2 className="">Add A New Expense</h2>
             <fieldset className="">
                 <div className="">
-                    <label htmlFor=""></label>
                     <input type="text" id="name" onChange={handleControlledInputChange} className="" placeholder="Expense Name" />
                 </div>
             </fieldset>
 
             <fieldset className="taskform-fieldset">
                 <div className="form-group">
-                    <label htmlFor="amount">$</label>
-                    <input type="number" id="amount" onChange={handleControlledInputChange}className="form-control" placeholder="Expense Cost" />
+                    <input type="number" id="amount" onChange={handleControlledInputChange} className="" placeholder="Expense Cost" />
+                </div>
+
+                <div>
+                    <select id="typeId" onChange={handleControlledInputChange} placeholder="type">
+                        <option selected disabled value="0" >Expense Type</option>
+                        {types.map(type => <option key={type.id} value={type.id}>{type.name}</option>)}
+                    </select>
                 </div>
             </fieldset>
             <button className=""
                 onClick={handleClickSaveTask}>
                 Add Expense
             </button>
+            <button onClick={() => history.push("/")}>Cancel</button>
         </form>
 
     )

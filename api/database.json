@@ -2,102 +2,52 @@
   "users": [
     {
       "id": 1,
-      "salary": "300000",
-      "perSaved": "20",
-      "name": "bruh moment",
-      "email": "a@a.com"
-    },
-    {
-      "id": 2,
-      "salary": "2000",
-      "perSaved": "12",
-      "name": "joe mama",
-      "email": "bruh@bruh.com"
-    },
-    {
-      "id": 3,
-      "salary": "2000",
-      "perSaved": "25",
-      "name": "joe mama",
-      "email": "re@re.com"
-    },
-    {
-      "id": 4,
-      "salary": "3968",
-      "perSaved": "15",
-      "name": "daniella tapolcsanyi",
-      "email": "d@d.com"
-    },
-    {
-      "id": 5,
-      "salary": "100",
-      "perSaved": "010101",
-      "name": "fds few",
-      "email": "wq@dsa.com"
-    },
-    {
-      "id": 6,
-      "salary": "1200",
-      "perSaved": "2",
-      "name": "bruh moment",
-      "email": "w@w.com"
-    },
-    {
-      "id": 7,
       "salary": "4000",
       "perSaved": "15",
-      "name": "gfljg jkfhkgjd",
-      "email": "s@s.com"
+      "name": "joe mama",
+      "email": "a@a.com"
+    }
+  ],
+  "types": [
+    {
+      "name": "Home",
+      "id": 1
+    },
+    {
+      "name": "Transportation",
+      "id": 2
+    },
+    {
+      "name": "Utilities",
+      "id": 3
+    },
+    {
+      "name": "Personal",
+      "id": 4
+    },
+    {
+      "name": "Entertainment",
+      "id": 5
+    },
+    {
+      "name": "Food",
+      "id": 6
     }
   ],
   "expenses": [
     {
-      "name": "FD",
-      "amount": "232",
-      "typeId": 1,
-      "userId": "2",
+      "name": "fsd",
+      "amount": "12",
+      "typeId": 2,
+      "userId": 1,
       "id": 1
     },
     {
-      "name": "meemo",
-      "amount": "42",
-      "typeId": 1,
-      "userId": "2",
+      "name": "fds",
+      "amount": "12",
+      "typeId": 4,
+      "userId": 1,
       "id": 2
-    },
-    {
-      "name": "car insurance",
-      "amount": "100",
-      "typeId": 1,
-      "userId": "4",
-      "id": 3
-    },
-    {
-      "name": "phone",
-      "amount": "100",
-      "typeId": 1,
-      "userId": "4",
-      "id": 4
-    },
-    {
-      "name": "car insurance",
-      "amount": "150",
-      "typeId": 1,
-      "userId": "7",
-      "id": 5
-    },
-    {
-      "name": "debt",
-      "amount": "1000",
-      "typeId": 1,
-      "userId": "7",
-      "id": 6
-    }
-  ],
-  "typeOfExpense": [
-    {
-      "name": "lol",
-      "id": 1
     }
   ]
 }

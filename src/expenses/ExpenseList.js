@@ -1,11 +1,14 @@
 import React, {useEffect, useReducer, useState} from "react";
 import { ExpenseCard, SalaryCard } from "./Expense";
-import { getAllExpenses, getAllUsers, addExpense, deleteExpense } from "../DataManager";
+import { getAllExpenses, getAllUsers, addExpense, deleteExpense, getAllTypes } from "../DataManager";
 import { useHistory } from "react-router";
 import { CheckingBalance } from "./MathFunctions";
 import "./Expense.css"
 
 export const ExpenseList = () => {
+
+    const [selected, setSelected] = useState(0);
+    const [types, setTypes] = useState([])
     const loguser = parseInt(sessionStorage.getItem("budget_user"))
     const [expenses, setExpenses] = useState ([])
     const [user, setUsers] = useState([])
@@ -23,6 +26,12 @@ export const ExpenseList = () => {
         })
     }
 
+    const getTypes = () => {
+        return getAllTypes().then(res => {
+            setTypes(res)
+        })
+    }
+
     const getUsers = () => {
         return getAllUsers().then(res => {
             setUsers(res)
@@ -32,10 +41,12 @@ export const ExpenseList = () => {
     const handleExpenseDelete = (expId) => {
         deleteExpense(expId).then(res => (
             getExpenses()
+            .then (res =>
+                console.log(res))
         ))
     }
 
-    const filteredExpenses = expenses.filter(expense => expense.user.id === loguser)
+    const filteredExpenses = expenses.filter(expense => expense.userId === loguser)
 
     let sum = 0;
 
@@ -45,10 +56,18 @@ export const ExpenseList = () => {
 
     const finalBalance = balanceAfterSaving - sum
 
+    const handleControlledInputChange = (event) => {
+        
+        console.log(event.target.value)
+        setSelected(event.target.value)
+	}
+
     useEffect(() => {
         getExpenses();
         getUsers();
+        getTypes();
     }, [])
+    
     return (
         <>
             {user.filter(user => user.id === loguser).map(user =>
@@ -59,10 +78,15 @@ export const ExpenseList = () => {
 
                 <button className="Salarybutton" onClick={() => history.push("/salaryform")}>Edit Salary</button>
                 <button className="Salarybutton" onClick={() => history.push("/expenseform")}>Add Expense</button>
+
+                <select onChange={handleControlledInputChange}>
+                    <option defaultValue value="0">All</option>
+                    {types.map(type => <option key={type.id} value={type.id}>{type.name}</option>)}
+                </select>
                 
                 </div>
 
-            {expenses.filter(expense => expense.user.id === loguser).map(expense =>
+            {filteredExpenses.filter(expense => expense.typeId == selected || selected == 0).map(expense =>
                 <ExpenseCard expense={expense} key={expense.id} handleExpenseDelete={handleExpenseDelete} />)}
         </>
     )

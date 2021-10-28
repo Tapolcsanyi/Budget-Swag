@@ -17,6 +17,18 @@ export const updateSalary = (user) => {
 		body: JSON.stringify(user)
 	}).then(data => data.json());
 }
+
+export const editExpense = (expense) => {
+	return fetch(`http://localhost:8088/expenses/${expense.id}`, {
+		method: "PUT",
+		headers: {
+			"Content-Type": "application/json"
+		},
+		body: JSON.stringify(expense)
+	}).then(data => data.json());
+}
+
+
 export const getAllUsers = () => {
     return fetch("http://localhost:8088/users")
     .then(res => res.json())
@@ -40,6 +52,11 @@ export const deleteExpense = (id) => {
 
 export const getUserById = (id) => {
     return fetch(`http://localhost:8088/users/${id}`)
+    .then(res => res.json())
+}
+
+export const getExpenseById = (id) => {
+    return fetch(`http://localhost:8088/expenses/${id}`)
     .then(res => res.json())
 }
 

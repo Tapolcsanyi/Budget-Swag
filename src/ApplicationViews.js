@@ -8,6 +8,7 @@ import { Register } from "./auth/Register"
 import { SalaryForm } from "./expenses/SalaryForm"
 import { ExpenseForm } from "./expenses/ExpenseForm"
 import { ExpenseList } from "./expenses/ExpenseList"
+import { ExpenseEditForm } from "./expenses/ExpenseEditForm"
 
 export const ApplicationViews = ({ clearUser, isAuthenticated, setAuthUser }) => {
 
@@ -41,15 +42,19 @@ export const ApplicationViews = ({ clearUser, isAuthenticated, setAuthUser }) =>
         <Login setAuthUser={setAuthUser} />
       </Route>
 
-      <Route path="/register">
+      <Route exact path="/register">
         <Register setAuthUser={setAuthUser} />
       </Route>
 
-      <Route path="/expenseform">
+      <Route exact path="/expenseform">
         <ExpenseForm />
       </Route>
 
-      <Route path="/salaryform">
+      <Route path="/expenses/:expenseId(\d+)/edit">
+        {isAuthenticated ? <ExpenseEditForm />: <Redirect to="/login" />}
+      </Route>
+
+      <Route exact path="/salaryform">
         <SalaryForm />
       </Route>
 

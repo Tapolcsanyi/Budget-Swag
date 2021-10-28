@@ -1,14 +1,17 @@
 import "./Expense.css"
 import { useState } from "react"
+import { useHistory } from "react-router"
 
 export const ExpenseCard = ({expense, handleExpenseDelete}) => {
+    const history = useHistory();
     return (
         <div className="budgetCard">
             <h2 className="budgetLabel">{expense.name}</h2>
             <div className="budgetInfo">
                 <h3>cost: ${expense.amount}</h3>
                 <h4>Type: {expense.type.name}</h4>
-                <button className="budgetButton" onClick={() => handleExpenseDelete(expense.id)}>delete expense</button>
+                <button className="budgetbutton" onClick={() => history.push(`/expenses/${expense.id}/edit`)}>Edit</button>
+                <button className="budgetButton" onClick={() => handleExpenseDelete(expense.id)}>Delete</button>
             </div>
         </div>
     )

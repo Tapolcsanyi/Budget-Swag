@@ -92,7 +92,7 @@ export const ExpenseEditForm = () => {
                     </div>
 
                     <div>
-                        <select id="typeId" onChange={handleControlledInputChange} placeholder="type">
+                        <select value={expense.typeId} id="typeId" onChange={handleControlledInputChange} placeholder="type">
                             <option selected disabled value="0" >Expense Type</option>
                             {types.map(type => <option key={type.id} value={type.id}>{type.name}</option>)}
                         </select>

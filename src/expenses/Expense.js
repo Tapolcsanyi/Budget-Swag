@@ -20,7 +20,6 @@ export const ExpenseCard = ({expense, handleExpenseDelete}) => {
 
 export const SalaryCard = ({user}) => {
     const amntSaved = (user.perSaved / 100) * user.salary
-    const balance = user.salary - user.salary * (user.perSaved / 100)
     return (
         <div className="">
             <h1 className="salaryName">Hi, {user.name}!</h1>

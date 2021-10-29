@@ -14,6 +14,9 @@ export const ExpenseList = () => {
     const [user, setUsers] = useState([])
     const [salary, setSalary] = useState([])
     const [saved, setSaved] = useState([])
+    const [filteredExpenses, setFilteredExpenses] = useState([])
+
+
     const history = useHistory();
     const userSalary = parseInt(sessionStorage.getItem("budget_salary"))
     const userPerSaved = parseInt(sessionStorage.getItem("budget_saving"))
@@ -46,19 +49,17 @@ export const ExpenseList = () => {
         ))
     }
 
-    const filteredExpenses = expenses.filter(expense => expense.userId === loguser)
-
     let sum = 0;
 
     for (let i = 0; i < filteredExpenses.length; i++) {
-    sum += parseInt(filteredExpenses[i].amount);
+    sum += parseFloat(filteredExpenses[i].amount);
+    console.log(sum)
     }
 
     const finalBalance = balanceAfterSaving - sum
+    console.log(balanceAfterSaving)
 
     const handleControlledInputChange = (event) => {
-        
-        console.log(event.target.value)
         setSelected(event.target.value)
 	}
 
@@ -67,6 +68,11 @@ export const ExpenseList = () => {
         getUsers();
         getTypes();
     }, [])
+
+    useEffect(() => {
+        const selectedExpenses = expenses.filter(expense => expense.userId === loguser)
+        setFilteredExpenses(selectedExpenses);
+    }, [expenses])
     
     return (
         <>
@@ -75,7 +81,7 @@ export const ExpenseList = () => {
 
                 <div className="budgetInfo2">
                     <h2>CHECKING BALANCE: </h2>
-                    <h2 className="salaryChecking">${finalBalance.toFixed(2)}</h2>
+                    <h2 className="salaryChecking">${(finalBalance.toFixed(2))}</h2>
                 </div>
 
                 <div className="buttons">

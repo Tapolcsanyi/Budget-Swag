@@ -2,10 +2,31 @@
   "users": [
     {
       "id": 1,
+      "salary": "50500",
+      "perSaved": "25",
+      "name": "Chief Keef",
+      "email": "a@a.com"
+    },
+    {
+      "email": "b@b.com",
+      "name": "bruh moment",
+      "salary": 0,
+      "perSaved": 0,
+      "id": 2
+    },
+    {
+      "id": 3,
+      "salary": "10000",
+      "perSaved": "10",
+      "name": "brenda long",
+      "email": "bl@bl.com"
+    },
+    {
+      "id": 4,
       "salary": "5500",
       "perSaved": "25",
-      "name": "joe mama",
-      "email": "a@a.com"
+      "name": "ian hoffman",
+      "email": "i@i.com"
     }
   ],
   "types": [
@@ -36,20 +57,6 @@
   ],
   "expenses": [
     {
-      "name": "car insurance",
-      "amount": "150",
-      "typeId": 2,
-      "userId": 1,
-      "id": 1
-    },
-    {
-      "name": "groceries",
-      "amount": "300",
-      "typeId": 6,
-      "userId": 1,
-      "id": 2
-    },
-    {
       "name": "restaurant dinners",
       "amount": "400",
       "typeId": 6,
@@ -78,13 +85,6 @@
       "id": 6
     },
     {
-      "name": "student loan",
-      "amount": "1000",
-      "typeId": 4,
-      "userId": 1,
-      "id": 7
-    },
-    {
       "name": "supreme drop",
       "amount": "250",
       "typeId": 4,
@@ -92,18 +92,60 @@
       "id": 8
     },
     {
-      "name": "gas",
-      "amount": "100",
-      "typeId": 2,
-      "userId": 1,
-      "id": 9
-    },
-    {
       "name": "mortgage",
       "amount": "1000",
       "typeId": 1,
       "userId": 1,
       "id": 10
+    },
+    {
+      "name": "crippling debt",
+      "amount": "100",
+      "typeId": 4,
+      "userId": 1,
+      "id": 11
+    },
+    {
+      "id": 14,
+      "name": "fds",
+      "amount": "12.91",
+      "typeId": 1,
+      "userId": 3
+    },
+    {
+      "name": "ksnfksd",
+      "amount": "10",
+      "typeId": 5,
+      "userId": 3,
+      "id": 15
+    },
+    {
+      "name": "fkjdhki",
+      "amount": "13",
+      "typeId": 4,
+      "userId": 4,
+      "id": 16
+    },
+    {
+      "name": "gkfjkgd",
+      "amount": "12",
+      "typeId": 4,
+      "userId": 4,
+      "id": 17
+    },
+    {
+      "name": "200",
+      "amount": "2000",
+      "typeId": 4,
+      "userId": 4,
+      "id": 18
+    },
+    {
+      "name": "ian",
+      "amount": "12.10",
+      "typeId": 6,
+      "userId": 4,
+      "id": 19
     }
   ]
 }

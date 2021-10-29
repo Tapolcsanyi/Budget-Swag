@@ -2,8 +2,8 @@
   "users": [
     {
       "id": 1,
-      "salary": "40000",
-      "perSaved": "15",
+      "salary": "5500",
+      "perSaved": "25",
       "name": "joe mama",
       "email": "a@a.com"
     }
@@ -36,25 +36,74 @@
   ],
   "expenses": [
     {
-      "id": 1,
-      "name": "fsd",
-      "amount": "12",
+      "name": "car insurance",
+      "amount": "150",
       "typeId": 2,
-      "userId": 1
+      "userId": 1,
+      "id": 1
     },
     {
-      "name": "fds",
-      "amount": "12",
-      "typeId": 4,
+      "name": "groceries",
+      "amount": "300",
+      "typeId": 6,
       "userId": 1,
       "id": 2
     },
     {
-      "id": 3,
-      "name": "hdfx",
-      "amount": "234",
+      "name": "restaurant dinners",
+      "amount": "400",
+      "typeId": 6,
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "name": "netflix n spotify",
+      "amount": "20",
       "typeId": 5,
-      "userId": 1
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "name": "water",
+      "amount": "100",
+      "typeId": 3,
+      "userId": 1,
+      "id": 5
+    },
+    {
+      "name": "electricity",
+      "amount": "100",
+      "typeId": 3,
+      "userId": 1,
+      "id": 6
+    },
+    {
+      "name": "student loan",
+      "amount": "1000",
+      "typeId": 4,
+      "userId": 1,
+      "id": 7
+    },
+    {
+      "name": "supreme drop",
+      "amount": "250",
+      "typeId": 4,
+      "userId": 1,
+      "id": 8
+    },
+    {
+      "name": "gas",
+      "amount": "100",
+      "typeId": 2,
+      "userId": 1,
+      "id": 9
+    },
+    {
+      "name": "mortgage",
+      "amount": "1000",
+      "typeId": 1,
+      "userId": 1,
+      "id": 10
     }
   ]
 }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { useParams, useHistory } from "react-router"
 import { getUserById, updateSalary } from "../DataManager";
+import "./Expense.css"
 
 export const SalaryForm = () => {
     const [user, setUser] = useState({ salary: "", perSaved: "" });
@@ -44,9 +45,17 @@ export const SalaryForm = () => {
 
     return (
         <>
-            <form>
+            <form className="salaryContainer">
+
                 <fieldset>
-                    <div className="formgrid">
+
+                    <div className="salaryFormContainer3">
+                        <h2 className="salaryName">Salary</h2>
+                        <h2 className="salaryName">Percent Saved</h2>
+                    </div>
+
+                    <div className="salaryFormContainer">
+                    <div className="formInput">
                         <input
                             type="number"
                             required
@@ -55,9 +64,9 @@ export const SalaryForm = () => {
                             id="salary"
                             value={user.salary}
                         />
-                        <label htmlFor="salary">Salary</label>
                     </div>
-                        <div className="formgrid">
+
+                    <div className="formInput">
                         <input
                             type="number"
                             required
@@ -66,15 +75,12 @@ export const SalaryForm = () => {
                             id="perSaved"
                             value={user.perSaved}
                         />
-                    
-                        <label htmlFor="perSaved">Percent Saved</label>
                     </div>
-                    <div className="">
-                     
                     </div>
-                    <div>
-                        <button type="button" onClick={updateCompletedTask}>Update</button>
-                        <button onClick={() => history.push("/")}>Cancel</button>
+
+                    <div className="salaryFormContainer2">
+                        <button className="budgetButton" type="button" onClick={updateCompletedTask}>Update</button>
+                        <button className="budgetButton" onClick={() => history.push("/")}>Cancel</button>
                     </div>
                 </fieldset>
             </form>

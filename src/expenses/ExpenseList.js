@@ -72,22 +72,34 @@ export const ExpenseList = () => {
         <>
             {user.filter(user => user.id === loguser).map(user =>
                 <SalaryCard user={user} key={user.id} />)}
-                <h2 className="budgetInfo">CHECKING BALANCE: ${finalBalance.toFixed(2)}</h2>
+
+                <div className="budgetInfo2">
+                    <h2>CHECKING BALANCE: </h2>
+                    <h2 className="salaryChecking">${finalBalance.toFixed(2)}</h2>
+                </div>
 
                 <div className="buttons">
-
-                <button className="Salarybutton" onClick={() => history.push("/salaryform")}>Edit Salary</button>
-                <button className="Salarybutton" onClick={() => history.push("/expenseform")}>Add Expense</button>
-
+                <button className="budgetButton" onClick={() => history.push("/salaryform")}>Edit Salary</button>
+                <button className="budgetButton" onClick={() => history.push("/expenseform")}>Add Expense</button>
                 <select onChange={handleControlledInputChange}>
                     <option defaultValue value="0">All</option>
                     {types.map(type => <option key={type.id} value={type.id}>{type.name}</option>)}
                 </select>
-                
                 </div>
 
+        <div className="budgetCard2">
+            <h2 className="budgetName2">Name</h2>
+            <h2 className="budgetName2">Cost</h2>
+            <h2 className="budgetName2">Type</h2>
+            <div className="">
+                <h2 className="">Edit</h2>
+            </div>
+        </div>
+
+            <div className="">
             {filteredExpenses.filter(expense => expense.typeId == selected || selected == 0).map(expense =>
                 <ExpenseCard expense={expense} key={expense.id} handleExpenseDelete={handleExpenseDelete} />)}
+            </div>
         </>
     )
 }

@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { ApplicationViews } from "./ApplicationViews"
-import { NavBar } from "./NavBar" 
+import { NavBar } from "./NavBar"
+import "./expenses/Expense.css"
 
 export const Budget = () => {
 
@@ -22,8 +23,10 @@ export const Budget = () => {
 
     return (
       <>
-        <NavBar />
-        <ApplicationViews clearUser={clearUser} setAuthUser={setAuthUser} isAuthenticated={isAuthenticated} />
+        <div className="mainBody">
+          <NavBar />
+          <ApplicationViews clearUser={clearUser} setAuthUser={setAuthUser} isAuthenticated={isAuthenticated} />
+        </div>
       </>
     )
 

@@ -1,4 +1,10 @@
-.budgetLabel {
+.budgetLabelName {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 10px;
+}
+.salaryName {
     display: flex;
     align-content: center;
     justify-content: center;
@@ -11,13 +17,129 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
+    width: 100%;
+    background-color: rgb(126, 126, 233);
+    color: rgb(20, 20, 100);
+}
+.budgetCard {
+    display: flex;
+    padding: 3px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    background-color: lightgrey;
+    margin: 3px;
 }
 .buttons {
     display: flex;
     justify-content: center;
     align-content: center;
+    width: 100%;
 }
 .Salarybutton {
     padding: 5px;
     margin: 5px;
+}
+.budgetName {
+    width: 25%;
+    color: rgb(20, 20, 100);
+}
+.budgetName3 {
+    width: 25%;
+    color: red;
+}
+.salaryCard {
+    display: flex;
+    padding: 3px;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+button {
+    display: flex;
+    padding: 5px;
+    margin: 5px;
+}
+.salaryName {
+    display: flex;
+    color: lightgrey;
+}
+.salaryName2 {
+    display: flex;
+    color: rgb(126, 126, 233);
+    justify-content: center;
+}
+.budgetButton2 {
+    width: 100px;
+    color: rgb(126, 126, 233);
+    background-color: rgb(20, 20, 100);
+    border-color: rgb(126, 126, 233);
+    text-align: center;
+    justify-content: center;
+}
+.budgetButton {
+    color: rgb(126, 126, 233);
+    background-color: rgb(20, 20, 100);
+    border-color: rgb(126, 126, 233);
+    text-align: center;
+    justify-content: center;
+}
+.budgetName2 {
+    width: 25%;
+    color: rgb(20, 20, 100);
+}
+.budgetCard2 {
+    display: flex;
+    margin: 3px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    background-color: lightgrey;
+    color: rgb(20, 20, 100);
+}
+.salaryChecking {
+    color: lime;
+    margin-left: 50px;;
+}
+.budgetInfo2 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: rgb(126, 126, 233);
+    flex-direction: row;
+    color: rgb(20, 20, 100);
+}
+.mainBody {
+    background-color: rgb(20, 20, 100);;
+}
+.salaryFormContainer {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.salaryFormContainer2 {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+    padding: 10px;
+}
+.salaryContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.salaryFormContainer3 {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+}
+.formInput {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px;
+}
+body {
+    background-color: rgb(20, 20, 100);
 }

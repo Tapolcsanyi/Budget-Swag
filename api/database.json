@@ -27,6 +27,13 @@
       "perSaved": "25",
       "name": "ian hoffman",
       "email": "i@i.com"
+    },
+    {
+      "id": 5,
+      "salary": "5000",
+      "perSaved": "20",
+      "name": "ball fella",
+      "email": "gh@gh.com"
     }
   ],
   "types": [
@@ -56,55 +63,6 @@
     }
   ],
   "expenses": [
-    {
-      "name": "restaurant dinners",
-      "amount": "400",
-      "typeId": 6,
-      "userId": 1,
-      "id": 3
-    },
-    {
-      "name": "netflix n spotify",
-      "amount": "20",
-      "typeId": 5,
-      "userId": 1,
-      "id": 4
-    },
-    {
-      "name": "water",
-      "amount": "100",
-      "typeId": 3,
-      "userId": 1,
-      "id": 5
-    },
-    {
-      "name": "electricity",
-      "amount": "100",
-      "typeId": 3,
-      "userId": 1,
-      "id": 6
-    },
-    {
-      "name": "supreme drop",
-      "amount": "250",
-      "typeId": 4,
-      "userId": 1,
-      "id": 8
-    },
-    {
-      "name": "mortgage",
-      "amount": "1000",
-      "typeId": 1,
-      "userId": 1,
-      "id": 10
-    },
-    {
-      "name": "crippling debt",
-      "amount": "100",
-      "typeId": 4,
-      "userId": 1,
-      "id": 11
-    },
     {
       "id": 14,
       "name": "fds",
@@ -146,6 +104,20 @@
       "typeId": 6,
       "userId": 4,
       "id": 19
+    },
+    {
+      "name": "car insurance",
+      "amount": "12",
+      "typeId": 2,
+      "userId": 5,
+      "id": 20
+    },
+    {
+      "name": "vclkvhcxk",
+      "amount": "12.50",
+      "typeId": 2,
+      "userId": 3,
+      "id": 21
     }
   ]
 }

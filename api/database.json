@@ -2,17 +2,17 @@
   "users": [
     {
       "id": 1,
-      "salary": "50500",
+      "salary": "60000",
       "perSaved": "25",
       "name": "Chief Keef",
       "email": "a@a.com"
     },
     {
-      "email": "b@b.com",
-      "name": "bruh moment",
-      "salary": 0,
+      "id": 2,
+      "salary": "0001",
       "perSaved": 0,
-      "id": 2
+      "name": "bruh moment",
+      "email": "b@b.com"
     },
     {
       "id": 3,
@@ -118,6 +118,62 @@
       "typeId": 2,
       "userId": 3,
       "id": 21
+    },
+    {
+      "id": 22,
+      "name": "car insurance",
+      "amount": "2000",
+      "typeId": 2,
+      "userId": 1
+    },
+    {
+      "name": "groceries",
+      "amount": "400",
+      "typeId": 6,
+      "userId": 1,
+      "id": 23
+    },
+    {
+      "name": "water n electric",
+      "amount": "300",
+      "typeId": 3,
+      "userId": 1,
+      "id": 24
+    },
+    {
+      "name": "spotify :p",
+      "amount": "12",
+      "typeId": 5,
+      "userId": 1,
+      "id": 27
+    },
+    {
+      "name": "crunchyroll",
+      "amount": "9",
+      "typeId": 5,
+      "userId": 1,
+      "id": 28
+    },
+    {
+      "name": "phone bill",
+      "amount": "70",
+      "typeId": 3,
+      "userId": 1,
+      "id": 29
+    },
+    {
+      "name": "crippling debt",
+      "amount": "40000",
+      "typeId": 4,
+      "userId": 1,
+      "id": 30
+    },
+    {
+      "name": "money crunk",
+      "amount": "12.90",
+      "typeId": 2,
+      "userId": 2,
+      "id": 31
     }
   ]
 }
